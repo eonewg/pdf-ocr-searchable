@@ -2,7 +2,7 @@
 name: pdf-ocr-searchable
 description: Use when converting scanned or image-only PDFs into searchable/copyable PDFs and optional structured Markdown. Prefer OCRmyPDF/Tesseract for coordinate-aligned PDF text layers; use the official PaddleOCR-VL job API for layout-aware Markdown extraction; keep VLM-only OCR as a fallback.
 version: 1.0.1
-author: Hermes Agent
+author: Eone
 license: MIT
 metadata:
   hermes:
