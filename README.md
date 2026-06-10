@@ -15,8 +15,6 @@ A public Hermes-compatible skill package and helper scripts for turning scanned 
 - Keeps a legacy VLM OCR path as a fallback when the official API is unavailable.
 - Documents a hybrid OCRmyPDF + PaddleOCR overlay pattern for better Chinese phrase search.
 
-This repository is sanitized for public use: it does not include personal file paths, local usernames, private token locations, generated OCR outputs, or API keys.
-
 ### Repository layout
 
 ```text
@@ -97,15 +95,6 @@ cp -R references scripts "$SKILL_DIR/"
 
 Then restart or reload Hermes if your runtime does not auto-discover new skill files.
 
-### Public-safety checklist before publishing changes
-
-Before publishing changes:
-
-- Run Python and shell syntax checks for scripts.
-- Remove generated caches such as `__pycache__`.
-- Search the repository for real credentials, machine-specific absolute paths, private usernames, generated OCR outputs, and local config files.
-- Review every match manually before committing.
-
 ### License
 
 MIT.
@@ -122,8 +111,6 @@ MIT.
 - 用官方 PaddleOCR-VL 异步任务 API 提取结构化 Markdown 和版面信息。
 - 保留一条旧版 VLM OCR 兜底路径，在官方 API 不可用时使用。
 - 文档中包含 OCRmyPDF + PaddleOCR 叠加方案，用来改善中文短语搜索效果。
-
-这个仓库已经按公开发布标准清理：不包含个人路径、本机用户名、私有 token 路径、生成的 OCR 结果或 API 密钥。
 
 ### 仓库结构
 
@@ -204,15 +191,6 @@ cp -R references scripts "$SKILL_DIR/"
 ```
 
 如果当前 Hermes 运行环境不会自动发现新 skill，复制后重启或重新加载 Hermes。
-
-### 公开发布前检查清单
-
-发布修改前建议检查：
-
-- 对 Python 和 shell 脚本做语法检查。
-- 删除 `__pycache__` 等生成缓存。
-- 搜索仓库里是否残留真实凭据、机器相关绝对路径、私有用户名、生成的 OCR 输出和本地配置文件。
-- 所有命中都要人工确认后再提交。
 
 ### 许可证
 
