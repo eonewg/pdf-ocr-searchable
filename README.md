@@ -15,6 +15,11 @@ A public Hermes-compatible skill package and helper scripts for turning scanned 
 - Keeps a legacy VLM OCR path as a fallback when the official API is unavailable.
 - Documents a hybrid OCRmyPDF + PaddleOCR overlay pattern for better Chinese phrase search.
 
+### Model and provider notes
+
+- Official structured extraction uses Baidu Qianfan / AI Studio's PaddleOCR-VL job API, defaulting to `PaddleOCR-VL-1.6`.
+- The legacy fallback uses SiliconFlow's OpenAI-compatible chat completions API, defaulting to `PaddlePaddle/PaddleOCR-VL-1.5`.
+
 ### Repository layout
 
 ```text
@@ -111,6 +116,11 @@ MIT.
 - 用官方 PaddleOCR-VL 异步任务 API 提取结构化 Markdown 和版面信息。
 - 保留一条旧版 VLM OCR 兜底路径，在官方 API 不可用时使用。
 - 文档中包含 OCRmyPDF + PaddleOCR 叠加方案，用来改善中文短语搜索效果。
+
+### 模型与服务商说明
+
+- 官方结构化提取路径使用百度千帆 / AI Studio 的 PaddleOCR-VL 任务 API，默认模型为 `PaddleOCR-VL-1.6`。
+- 旧版兜底路径使用硅基流动的 OpenAI 兼容 Chat Completions API，默认模型为 `PaddlePaddle/PaddleOCR-VL-1.5`。
 
 ### 仓库结构
 

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Make a scanned PDF searchable with SiliconFlow PaddleOCR-VL.
 
+Default model: PaddlePaddle/PaddleOCR-VL-1.5.
 Pipeline:
   PDF page -> rendered PNG -> SiliconFlow chat/completions VLM OCR ->
   original visual PDF page + invisible OCR text layer -> searchable PDF.

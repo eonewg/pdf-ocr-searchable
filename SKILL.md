@@ -1,12 +1,12 @@
 ---
 name: pdf-ocr-searchable
 description: Use when converting scanned or image-only PDFs into searchable/copyable PDFs and optional structured Markdown. Prefer OCRmyPDF/Tesseract for coordinate-aligned PDF text layers; use the official PaddleOCR-VL job API for layout-aware Markdown extraction; keep VLM-only OCR as a fallback.
-version: 1.0.1
+version: 1.0.2
 author: Eone
 license: MIT
 metadata:
   hermes:
-    tags: [pdf, ocr, searchable-pdf, ocrmypdf, paddleocr, vlm]
+    tags: [pdf, ocr, searchable-pdf, ocrmypdf, paddleocr, siliconflow, baidu-qianfan, vlm]
     related_skills: [ocr-and-documents]
 ---
 
@@ -17,8 +17,8 @@ metadata:
 This skill turns scanned or image-only PDFs into searchable, copyable PDFs while preserving the original page visuals. It separates two concerns:
 
 - **Searchable PDF text layer:** use OCRmyPDF + Tesseract. This is the preferred path when the deliverable must remain a PDF with text selection/search support.
-- **Structured extraction:** use the official PaddleOCR-VL async job API when you also need Markdown, layout blocks, tables, formulas, or extracted images.
-- **Fallback OCR:** use the legacy VLM fallback only when the official structured API is unavailable or when a rough text/Markdown pass is enough.
+- **Structured extraction:** use the official PaddleOCR-VL async job API when you also need Markdown, layout blocks, tables, formulas, or extracted images. This path uses Baidu Qianfan / AI Studio's PaddleOCR-VL service and defaults to `PaddleOCR-VL-1.6`.
+- **Fallback OCR:** use the legacy VLM fallback only when the official structured API is unavailable or when a rough text/Markdown pass is enough. This path uses SiliconFlow's OpenAI-compatible API and defaults to `PaddlePaddle/PaddleOCR-VL-1.5`.
 
 The public version of this skill intentionally avoids user-specific paths, private filenames, local account names, and API tokens. Keep local paths and secrets in environment variables, local config files ignored by git, or your agent's private memory—not in this skill.
 

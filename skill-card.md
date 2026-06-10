@@ -1,7 +1,7 @@
 ---
 title: PDF OCR Searchable
 slug: pdf-ocr-searchable
-version: 1.0.1
+version: 1.0.2
 author: Eone
 license: MIT
 tags:
@@ -10,6 +10,8 @@ tags:
   - searchable-pdf
   - ocrmypdf
   - paddleocr
+  - siliconflow
+  - baidu-qianfan
   - hermes-skill
 ---
 
@@ -21,7 +23,8 @@ Convert scanned/image PDFs into searchable PDFs with OCRmyPDF/Tesseract, plus op
 
 - Coordinate-aligned searchable PDF output via OCRmyPDF.
 - Chinese + English default OCR language configuration (`chi_sim+eng`).
-- Official PaddleOCR-VL async job client for page Markdown, JSONL, layout blocks, tables, formulas, and extracted images.
+- Official PaddleOCR-VL async job client for page Markdown, JSONL, layout blocks, tables, formulas, and extracted images. Uses Baidu Qianfan / AI Studio by default (`PaddleOCR-VL-1.6`).
+- Legacy SiliconFlow VLM fallback via `PaddlePaddle/PaddleOCR-VL-1.5`.
 - Hybrid OCRmyPDF + PaddleOCR pattern for stronger Chinese phrase search on study PDFs.
 - Public-safe packaging: no API tokens, personal paths, generated OCR outputs, or private config files.
 

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Run official PaddleOCR-VL job API and download JSONL/Markdown/images.
+"""Run Baidu Qianfan / AI Studio official PaddleOCR-VL job API and download JSONL/Markdown/images.
 
+Default model: PaddleOCR-VL-1.6.
 Token is read from PADDLEOCR_TOKEN or --token. Do not hardcode tokens.
 """
 
