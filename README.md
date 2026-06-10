@@ -23,8 +23,9 @@ This repository is sanitized for public use: it does not include personal file p
 README.md
 LICENSE
 .gitignore
-skill/SKILL.md
-skill/references/ocrmypdf-paddleocr-hybrid.md
+SKILL.md
+skill-card.md
+references/ocrmypdf-paddleocr-hybrid.md
 scripts/ocrmypdf_searchable_pdf.sh
 scripts/paddleocr_official_job.py
 scripts/siliconflow_pdf_ocr.py
@@ -79,13 +80,19 @@ Use environment variables, a shell secret manager, or local dotenv files exclude
 
 ### Install as a Hermes skill
 
-Copy the skill directory into your local Hermes skill tree. Example with an explicit destination variable:
+Clone this repository directly into your local Hermes skill tree:
+
+```bash
+git clone https://github.com/eonewg/pdf-ocr-searchable.git "$HOME/.hermes/skills/productivity/pdf-ocr-searchable"
+```
+
+Or copy the root skill package manually:
 
 ```bash
 SKILL_DIR="$HOME/.hermes/skills/productivity/pdf-ocr-searchable"
 mkdir -p "$SKILL_DIR"
-cp skill/SKILL.md "$SKILL_DIR/SKILL.md"
-cp -R skill/references "$SKILL_DIR/"
+cp SKILL.md skill-card.md "$SKILL_DIR/"
+cp -R references scripts "$SKILL_DIR/"
 ```
 
 Then restart or reload Hermes if your runtime does not auto-discover new skill files.
@@ -124,8 +131,9 @@ MIT.
 README.md
 LICENSE
 .gitignore
-skill/SKILL.md
-skill/references/ocrmypdf-paddleocr-hybrid.md
+SKILL.md
+skill-card.md
+references/ocrmypdf-paddleocr-hybrid.md
 scripts/ocrmypdf_searchable_pdf.sh
 scripts/paddleocr_official_job.py
 scripts/siliconflow_pdf_ocr.py
@@ -180,13 +188,19 @@ python scripts/siliconflow_pdf_ocr.py input.pdf
 
 ### 安装为 Hermes skill
 
-把 `skill/` 目录复制到本地 Hermes skill 目录即可。下面示例用变量显式指定目标目录：
+直接把这个仓库 clone 到本地 Hermes skill 目录：
+
+```bash
+git clone https://github.com/eonewg/pdf-ocr-searchable.git "$HOME/.hermes/skills/productivity/pdf-ocr-searchable"
+```
+
+也可以手动复制根目录 skill 包：
 
 ```bash
 SKILL_DIR="$HOME/.hermes/skills/productivity/pdf-ocr-searchable"
 mkdir -p "$SKILL_DIR"
-cp skill/SKILL.md "$SKILL_DIR/SKILL.md"
-cp -R skill/references "$SKILL_DIR/"
+cp SKILL.md skill-card.md "$SKILL_DIR/"
+cp -R references scripts "$SKILL_DIR/"
 ```
 
 如果当前 Hermes 运行环境不会自动发现新 skill，复制后重启或重新加载 Hermes。
